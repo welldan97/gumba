@@ -9,6 +9,6 @@ task 'build', 'Compile CoffeeScript source files', ->
       throw new Error(err) if err
 
 task 'test', 'Test project', ->
-  exec "mocha --compilers coffee:coffee-script", (err, output) ->
+  exec "mocha --recursive --compilers coffee:coffee-script", (err, output) ->
     throw err if err
     console.log output
