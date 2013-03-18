@@ -1,0 +1,40 @@
+{
+  "name": "gumba",
+  "version": "1.0.0",
+  "author": "Dmitry Yakimov <welldan97@gmail.com>",
+  "description": "Gumba provides modern language features to your everyday shell scripting",
+  "bin": "./bin/gumba",
+  "main": "./lib/gumba",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/welldan97/gumba.git"
+  },
+
+  "keywords": [
+    "command-line",
+    "utility",
+    "parser",
+    "stdin"
+  ],
+
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://github.com/welldan97/gumba/LICENSE"
+  }],
+
+  "dependencies": {
+      "underscore": ">= 1.4.x",
+      "underscore.string": ">= 2.3.x",
+      "coffee-script": ">= 1.6.x"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "cake test",
+    "pretest": "cake build",
+    "prepublish": "cake build"
+  }
+}
