@@ -5,6 +5,11 @@ expect = chai.expect
 gumba = require "../lib/gumba"
 
 describe 'gumba', ->
+  describe '#init', ->
+    it 'should not fail', ->
+      expect( ->
+        gumba.init()
+      ).to.not.throw()
   describe '#parse', ->
     it 'should parse line', ->
       expect(
