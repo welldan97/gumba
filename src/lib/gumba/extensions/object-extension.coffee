@@ -11,8 +11,8 @@ class ObjectExtension extends AbstractExtension
     'extend', 'pick', 'omit', 'defaults', 'clone', 'tap', 'has',
     'isEqual', 'isEmpty', 'isElement', 'isArray', 'isObject',
     'isArguments', 'isFunction', 'isString', 'isNumber', 'isFinite',
-    'isBoolean', 'isDate', 'isRegExp', 'isNaN', 'isNull',
-    'isUndefined'
+    'isBoolean', 'isDate', 'isRegExp', 'isNaN', 'isNull'
+#    'isUndefined'
   ]
 
   _object: Object
