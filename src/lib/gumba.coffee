@@ -4,8 +4,8 @@ CoffeeScript = require 'coffee-script'
 
 _.mixin _.str.exports()
 
-
 gumba = {}
+
 gumba.init = ->
   extendStandardObjectsUnderscoreFunctions()
 
