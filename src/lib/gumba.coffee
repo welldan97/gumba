@@ -24,10 +24,11 @@ Gumba.init = ->
 
 Gumba.parse = (line, parser)->
   Gumba._sandbox line, ->
-    Gumba._eval "\"#{line}\".#{parser}"
+    Gumba._eval line, parser
 
-Gumba._eval = (value) ->
-  eval CoffeeScript.compile value, bare: on
+Gumba._eval = (line, parser) ->
+  eval CoffeeScript.compile "line.#{parser}", bare: on
+
 
 Gumba._sandbox = (fallback, cb) ->
   try

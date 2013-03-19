@@ -15,12 +15,12 @@ describe 'Gumba', ->
       expect(
         Gumba.parse "hello World", "capitalize()"
       ).to.equal "Hello World"
-
+      
   describe '#_eval', ->
     it 'should eval coffeescript', ->
       expect(
-        Gumba._eval '"12#{3}45"'
-      ).to.equal "12345"
+        Gumba._eval "abc","toUpperCase()"
+      ).to.equal "ABC"
 
   describe '#_sandbox', ->
     it 'should throw coffeescript compilation errors', ->
