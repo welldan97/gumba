@@ -2,7 +2,10 @@ _ = require 'underscore'
 _.str = require 'underscore.string'
 CoffeeScript = require 'coffee-script'
 
+takeMixin = require './gumba/take'
+
 _.mixin _.str.exports()
+_.mixin takeMixin
 
 ArrayExtension = require './gumba/extensions/array-extension'
 FunctionExtension = require './gumba/extensions/function-extension'
