@@ -7,9 +7,9 @@ gumba = require "../lib/gumba"
 describe 'gumba', ->
   describe '#init', ->
     it 'should extend standard objects with underscore functions', ->
-      expect(-> "Hello World".capitalize()).to.throw()
+      expect("Hello World".capitalize).to.not.be.ok
       gumba.init()
-      expect(-> "Hello World".capitalize()).to.not.throw()
+      expect("Hello World".capitalize).to.be.ok
 
   describe '#parse', ->
     it 'should parse line', ->
