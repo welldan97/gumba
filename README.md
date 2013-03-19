@@ -72,17 +72,17 @@ Gumba uses just coffeescript so you can make regex replaces easily
 using standard javascript functions:
 
 ```shell
-echo "['bulbasaur' 'chermander' 'pikachu'];" |   
+echo "['bulbasaur' 'chermander' 'pikachu'];" |
 u "trim('[];')\                                             # -> 'bulbasaur' 'chermander' 'pikachu'
 .replace(/'.*?'/g, (match) -> match.trim('\'').humanize())\ # -> Bulbasaur Chermander Pikachu
-.words().toSentence()"                                      # -> Bulbasaur, Chermander, and Pikachu
+.words().toSentence()"                                      # -> Bulbasaur, Chermander and Pikachu
 ```
 
 Gumba provides `take` function which provides you ability to use
 javascript in more flexible way using line object as it's argument:
 
 ```shell
-echo "hi" | u 'take (line) -> '!' + line.toUpperCase() + '!'" # -> !HI!
+echo hi | u "take (line) -> line.toUpperCase() + '!'" # -> !HI!
 ``
 
 Supported methods
