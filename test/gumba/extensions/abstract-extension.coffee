@@ -1,7 +1,7 @@
 chai = require 'chai'
 expect = chai.expect
 
-AbstractExtension = require "../../lib/gumba/abstract-extension"
+AbstractExtension = require "../../../lib/gumba/extensions/abstract-extension"
 
 describe 'AbstractExtension', ->
   _ = example: (object) -> "#{object}!"

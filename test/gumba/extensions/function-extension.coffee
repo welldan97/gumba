@@ -1,7 +1,7 @@
 chai = require 'chai'
 expect = chai.expect
 
-FunctionExtension = require "../../lib/gumba/function-extension"
+FunctionExtension = require "../../../lib/gumba/extensions/function-extension"
 
 describe 'FunctionExtension', ->
   describe '#apply', ->

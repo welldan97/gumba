@@ -4,11 +4,11 @@ CoffeeScript = require 'coffee-script'
 
 _.mixin _.str.exports()
 
-ArrayExtension = require './gumba/array-extension'
-FunctionExtension = require './gumba/function-extension'
-NumberExtension = require './gumba/number-extension'
-ObjectExtension = require './gumba/object-extension'
-StringExtension = require './gumba/string-extension'
+ArrayExtension = require './gumba/extensions/array-extension'
+FunctionExtension = require './gumba/extensions/function-extension'
+NumberExtension = require './gumba/extensions/number-extension'
+ObjectExtension = require './gumba/extensions/object-extension'
+StringExtension = require './gumba/extensions/string-extension'
 
 Gumba = {}
 
