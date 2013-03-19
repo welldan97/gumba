@@ -2,41 +2,41 @@ CoffeeScript = require 'coffee-script'
 chai = require 'chai'
 expect = chai.expect
 
-gumba = require "../lib/gumba"
+Gumba = require "../lib/gumba"
 
-describe 'gumba', ->
+describe 'Gumba', ->
   describe '#init', ->
     it 'should not fail', ->
       expect( ->
-        gumba.init()
+        Gumba.init()
       ).to.not.throw()
   describe '#parse', ->
     it 'should parse line', ->
       expect(
-        gumba.parse "hello World", "capitalize()"
+        Gumba.parse "hello World", "capitalize()"
       ).to.equal "Hello World"
 
   describe '#_eval', ->
     it 'should eval coffeescript', ->
       expect(
-        gumba._eval '"12#{3}45"'
+        Gumba._eval '"12#{3}45"'
       ).to.equal "12345"
 
   describe '#_sandbox', ->
     it 'should throw coffeescript compilation errors', ->
       expect( ->
-        gumba._sandbox 'fallback', ->
+        Gumba._sandbox 'fallback', ->
           CoffeeScript.compile "(123"
       ).to.throw(SyntaxError)
 
     it 'should suppress other kinds of errors', ->
       expect( ->
-        gumba._sandbox 'fallback', ->
+        Gumba._sandbox 'fallback', ->
           (undefined)[5]
       ).to.not.throw()
 
     it 'should return fallback on error input', ->
       expect(
-        gumba._sandbox 'fallback', ->
+        Gumba._sandbox 'fallback', ->
           (undefined)[5]
       ).to.equal 'fallback'

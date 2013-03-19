@@ -10,27 +10,27 @@ NumberExtension = require './gumba/number-extension'
 ObjectExtension = require './gumba/object-extension'
 StringExtension = require './gumba/string-extension'
 
-gumba = {}
+Gumba = {}
 
-gumba.init = ->
+Gumba.init = ->
   ArrayExtension::apply()
   FunctionExtension::apply()
   NumberExtension::apply()
   ObjectExtension::apply()
   StringExtension::apply()
 
-gumba.parse = (line, parser)->
-  gumba._sandbox line, ->
-    gumba._eval "\"#{line}\".#{parser}"
+Gumba.parse = (line, parser)->
+  Gumba._sandbox line, ->
+    Gumba._eval "\"#{line}\".#{parser}"
 
-gumba._eval = (value) ->
+Gumba._eval = (value) ->
   eval CoffeeScript.compile value, bare: on
 
-gumba._sandbox = (fallback, cb) ->
+Gumba._sandbox = (fallback, cb) ->
   try
     cb() ? fallback
   catch e
     throw e if e instanceof SyntaxError
     fallback
 
-module.exports = gumba
+module.exports = Gumba
