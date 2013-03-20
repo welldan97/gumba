@@ -1,4 +1,5 @@
 # Gumba
+[![Build Status](https://travis-ci.org/welldan97/gumba.png)](https://travis-ci.org/welldan97/gumba)
 
 Gumba like to live between your shell pipes. When writing scripts is too much
 hassle and writing shell function is too much magic you use Gumba.
