@@ -45,8 +45,8 @@ Both return `file_path`. So basically `cut -d ' ' -f4 | tr -d` becomes
 the second still feels cleaner and easier to remember. This is a real
 world example, after which I decided to make Gumba.
 
-### Second Example --- Sed replacement:
-Another real world example, from the question on StackOverflow ---
+### Second Example — Sed replacement:
+Another real world example, from the question on StackOverflow —
 (How to trim
 whitespace?)[http://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-bash-variable]
 
