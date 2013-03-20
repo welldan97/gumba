@@ -126,5 +126,7 @@ Contribute
 ----------
 
 Fork, Pull, Post issues.
-I woul love to get any help in project cultivation.
+
+I would love to get any help in project cultivation.
+
 :sunflower:
