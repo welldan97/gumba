@@ -80,7 +80,7 @@ Gumba provides `take` function which provides you ability to use
 javascript in more flexible way using line object as it's argument:
 
 ```shell
-echo hi | u 'take (line) -> "#{line.toUpperCase()}!"' # -> !HI!
+echo hi | u 'take (line) -> "#{line.toUpperCase()}!"' # -> HI!
 ```
 
 Supported methods
