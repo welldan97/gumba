@@ -1,7 +1,5 @@
 # Gumba
 
-Gumba provides modern language features to your everyday shell scripting.
-
 Gumba like to live between your shell pipes. When writing scripts is too much
 hassle and writing shell function is too much magic you use Gumba.
 
