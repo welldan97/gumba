@@ -13,7 +13,7 @@ You can install Gumba using npm command:
 npm install -g coffee-script
 ```
 
-Also if you going to using to use it frequently and I hope so, add a shorthand to your shell init file:
+Also if you are going to using to use it frequently and I hope so, add a shorthand to your shell init file:
 
 ```shell
 alias u='gumba'
