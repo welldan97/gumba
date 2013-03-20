@@ -48,7 +48,7 @@ world example, after which I decided to make Gumba.
 
 ### Second Example — Sed replacement:
 Another real world example comes from the question on StackOverflow —
-(How to trim whitespace?)[http://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-bash-variable]
+[How to trim whitespace?](http://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-bash-variable)
 
 before Gumba:
 
