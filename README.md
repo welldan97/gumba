@@ -33,19 +33,19 @@ Look at following examples:
 before Gumba:
 
 ```shell
-echo "  IdentityFile \"file_path\"" | cut -d ' ' -f4 | tr -d '"'
+echo '  IdentityFile "file_path"' | cut -d ' ' -f4 | tr -d '"'
 ```
 
 after Gumba:
 
 ```shell
-echo "  IdentityFile \"file_path\"" | u "clean().(' ').last().trim('\"')"
+echo '  IdentityFile "file_path"' | u 'clean().words().last().trim("\"")'
 ```
 
 Both return `file_path`. So basically `cut -d ' ' -f4 | tr -d` becomes
-`u "clean().split(' ').last().trim('\"')"`. Although first is not so
-bad, the second still feels cleaner and easier to remember. This is
-a real world example, after which I decided to make Gumba.
+`u 'clean().words().last().trim("\"")'`. Although first is not so bad,
+the second still feels cleaner and easier to remember. This is a real
+world example, after which I decided to make Gumba.
 
 ### Second Example --- Sed replacement:
 Another real world example, from the question on StackOverflow ---
@@ -55,7 +55,7 @@ whitespace?)[http://stackoverflow.com/questions/369758/how-to-trim-whitespace-fr
 before Gumba:
 
 ```shell
-echo " test test test " | sed -e 's/^ *//g' -e 's/ *$//g'
+echo ' test test test ' | sed -e 's/^ *//g' -e 's/ *$//g'
 ```
 
 Seriously?
@@ -63,7 +63,7 @@ Seriously?
 after Gumba:
 
 ```shell
-echo " test test test " | u "trim()"
+echo ' test test test ' | u 'trim()'
 ```
 
 ### More Examples:
@@ -82,7 +82,7 @@ Gumba provides `take` function which provides you ability to use
 javascript in more flexible way using line object as it's argument:
 
 ```shell
-echo hi | u "take (line) -> line.toUpperCase() + '!'" # -> !HI!
+echo hi | u 'take (line) -> "#{line.toUpperCase()}!"' # -> !HI!
 ``
 
 Supported methods
@@ -111,7 +111,7 @@ Every time you pipe to `gumba` it evaluates function passed as argument passed t
 of piped stream:
 
 ```shell
-echo "Hello World" | u "toUpperCase().take (line) -> line + '!'"
+echo "Hello World" | u 'toUpperCase().take (line) -> "#{line}!"'
 ```
 
 converts to javascript
@@ -120,7 +120,7 @@ converts to javascript
 "HelloWorld"
   .toUpperCase()
   .take(function(line){
-    return line + '!';
+    return line + "!";
   })
 ```
 
