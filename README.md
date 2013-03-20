@@ -11,7 +11,7 @@ Make sure you have [Node.js](http://nodejs.org) & [npm](http://npmjs.org) instal
 You can install Gumba using npm command:
 
 ```shell
-npm install -g coffee-script
+sudo npm install -g coffee-script
 ```
 
 Also if you are going to using to use it frequently and I hope so, add a shorthand to your shell init file:
