@@ -1,7 +1,7 @@
 # Gumba
 [![Build Status](https://travis-ci.org/welldan97/gumba.png)](https://travis-ci.org/welldan97/gumba)
 
-Gumba like to live between your shell pipes. When writing scripts is too much
+Gumba likes to live between your shell pipes. When writing scripts is too much
 hassle and writing shell function is too much magic you use Gumba.
 
 Installation
@@ -23,7 +23,7 @@ alias u='gumba'
 Usage
 -----
 
-With gumba you can use [coffescript](http://coffeescript.org) language powered by [underscore](http://documentcloud.github.com/underscore) & [underscore.string](http://epeli.github.com/underscore.string) inside your command line. Think of Gumba as a kind of `awk`, or `sed`. 
+With gumba you can use [coffescript](http://coffeescript.org) language powered by [underscore](http://documentcloud.github.com/underscore) & [underscore.string](http://epeli.github.com/underscore.string) inside your command line. Think of Gumba as a kind of `awk` or `sed`. 
 
 Look at following examples:
 
@@ -47,9 +47,8 @@ the second still feels cleaner and easier to remember. This is a real
 world example, after which I decided to make Gumba.
 
 ### Second Example — Sed replacement:
-Another real world example, from the question on StackOverflow —
-(How to trim
-whitespace?)[http://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-bash-variable]
+Another real world example comes from the question on StackOverflow —
+(How to trim whitespace?)[http://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-bash-variable]
 
 before Gumba:
 
@@ -100,7 +99,7 @@ methods:
 ```
 
 To have a look on underscore methods reference go [here](http://underscorejs.org),
-for underscore.string - [here](https://github.com/epeli/underscore.string)
+for underscore.string — [here](https://github.com/epeli/underscore.string)
 
 
 Function evaluation
@@ -126,7 +125,7 @@ converts to javascript
 Contribute
 ----------
 
-Fork, Pull, Post issues.
+Fork, Pull, Post Issues.
 
 I would love to get any help in project cultivation.
 
