@@ -7,7 +7,7 @@ expect = chai.expect
 #  console.log stdout
 
 describe 'Gumba command', ->
-  u = 'bin/gumba.js'
+  u = 'bin/gumba'
   
   it 'processes first exapmle from Readme', (done) ->
     echo = 'echo "  IdentityFile \\"file_path\\""'
