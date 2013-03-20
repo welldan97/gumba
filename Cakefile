@@ -11,6 +11,8 @@ task 'build', 'Compile CoffeeScript source files', ->
       throw new Error(err) if err
       exec "coffee --compile -p src/bin/gumba.coffee >> bin/gumba", (err, stdout, stderr) ->
         throw new Error(err) if err
+        exec "chmod +x bin/gumba", (err, stdout, stderr) ->
+          throw new Error(err) if err
 
 task 'test', 'Test project', ->
   exec "mocha --recursive --compilers coffee:coffee-script", (err, output) ->
