@@ -122,6 +122,15 @@ converts to javascript
   })
 ```
 
+ToDo
+----
+
+I am thinking about creating another tool, which will be more for
+filtering lines, it will be like `grep`. At first I thought it's not
+needed, but now I actually feel it will helpful too. So after that, it
+will be Map/reduce suit for command-line kung-fu and API will change.
+Follow the updates.
+
 Contribute
 ----------
 
