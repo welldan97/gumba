@@ -38,7 +38,7 @@ echo '  IdentityFile "file_path"' | cut -d ' ' -f4 | tr -d '"'
 after Gumba:
 
 ```shell
-echo '  IdentityFile "file_path"' | u 'clean().words().last().trim("\"")'
+echo '  IdentityFile "file_path"' | gumba 'clean().words().last().trim("\"")'
 ```
 
 Both return `file_path`. So basically `cut -d ' ' -f4 | tr -d` becomes
@@ -61,7 +61,7 @@ Seriously?
 after Gumba:
 
 ```shell
-echo ' test test test ' | u 'trim()'
+echo ' test test test ' | gumba 'trim()'
 ```
 
 ### More Examples:
@@ -71,7 +71,7 @@ using standard javascript functions:
 
 ```shell
 echo "['bulbasaur' 'chermander' 'pikachu'];" |
-u "trim('[];')\                                             # -> 'bulbasaur' 'chermander' 'pikachu'
+gumba "trim('[];')\                                             # -> 'bulbasaur' 'chermander' 'pikachu'
 .replace(/'.*?'/g, (match) -> match.trim('\'').humanize())\ # -> Bulbasaur Chermander Pikachu
 .words().toSentence()"                                      # -> Bulbasaur, Chermander and Pikachu
 ```
@@ -80,7 +80,7 @@ Gumba provides `take` function which provides you ability to use
 javascript in more flexible way using line object as it's argument:
 
 ```shell
-echo hi | u 'take (line) -> "#{line.toUpperCase()}!"' # -> HI!
+echo hi | gumba 'take (line) -> "#{line.toUpperCase()}!"' # -> HI!
 ```
 
 Supported methods
@@ -109,7 +109,7 @@ Every time you pipe to `gumba` it evaluates function passed as argument passed t
 of piped stream:
 
 ```shell
-echo "Hello World" | u 'toUpperCase().take (line) -> "#{line}!"'
+echo "Hello World" | gumba 'toUpperCase().take (line) -> "#{line}!"'
 ```
 
 converts to javascript
@@ -125,8 +125,7 @@ converts to javascript
 Contribute
 ----------
 
-Fork, Pull, Post Issues.
+Fork, Pull, Post Issues!
 
 I would love to get any help in project cultivation.
 
-:sunflower:
