@@ -71,7 +71,7 @@ using standard javascript functions:
 
 ```shell
 echo "['bulbasaur' 'chermander' 'pikachu'];" |
-gumba "trim('[];')\                                             # -> 'bulbasaur' 'chermander' 'pikachu'
+gumba "trim('[];')\                                         # -> 'bulbasaur' 'chermander' 'pikachu'
 .replace(/'.*?'/g, (match) -> match.trim('\'').humanize())\ # -> Bulbasaur Chermander Pikachu
 .words().toSentence()"                                      # -> Bulbasaur, Chermander and Pikachu
 ```
