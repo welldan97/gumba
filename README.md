@@ -76,13 +76,6 @@ gumba "trim('[];')\                                         # -> 'bulbasaur' 'ch
 .words().toSentence()"                                      # -> Bulbasaur, Chermander and Pikachu
 ```
 
-Gumba provides `take` function which provides you ability to use
-javascript in more flexible way using line object as it's argument:
-
-```shell
-echo hi | gumba 'take (line) -> "#{line.toUpperCase()}!"' # -> HI!
-```
-
 Supported methods
 -----------------
 
@@ -100,6 +93,13 @@ methods:
 
 To have a look on underscore methods reference go [here](http://underscorejs.org),
 for underscore.string — [here](https://github.com/epeli/underscore.string)
+
+Also Gumba provides `take` function which provides you ability to use
+javascript in more flexible way using line object as it's argument:
+
+```shell
+echo hi | gumba 'take (line) -> "#{line.toUpperCase()}!"' # -> HI!
+```
 
 
 Function evaluation
