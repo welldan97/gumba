@@ -1,6 +1,6 @@
 {
   "name": "gumba",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Dmitry Yakimov <welldan97@gmail.com>",
   "description": "Gumba provides modern language features to your everyday shell scripting",
   "bin": "./bin/gumba",
